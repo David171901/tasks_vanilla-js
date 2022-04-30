@@ -1,0 +1,227 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* GLOBAL STYLES */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+body,html{
+    overflow-x: hidden;
+}
+
+:root {
+    --main-bg-green: #45B82E;
+    --main-bg-gray: #a5b4a1;
+    --main-bg-yellow: #D6EB52;
+    --main-bg-purple: #AD8EED;
+    --main-bg-blue: #352EB8;
+}
+
+/* 
+1. Posicionamiento
+2. Modelo de caja {Width - Height}
+3. Tipografia
+4. Visuales (Border Shadow)
+5. Otros {} 
+*/
+
+
+body{
+    background: var(--main-bg-gray);
+    padding: 0 2rem 0 2rem;
+}
+
+/* NAVBAR */
+.navbar{
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    font-size: xx-large;
+    font-weight: bold;
+}
+.navbar__item a{
+    text-decoration: none;
+    color: black;
+}
+
+/* MAIN */
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    margin-bottom: 50px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    width: 90%;
+    background: var(--main-bg-green);
+    border-radius: 20px;
+}
+.form__header{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: var(--main-bg-yellow);
+    width: 100%;
+    height: 15%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 0 2rem;
+}
+.form__body{
+    padding: 0 2rem;
+    width: 100%;
+}
+.form__field{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.85rem;
+    font-size: 1.25rem;
+}
+.form__input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form__submit {
+    width: 100%;
+    background-color: var(--main-bg-yellow);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+  
+.form__submit:hover {
+    background-color: #d4f30a;
+}
+  
+/* TABLE */
+
+.task__header {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+.task__header th {
+    padding: 8px;
+    border: solid 1px white;
+}
+
+.task__header td {
+    padding: 8px;
+}
+  
+.task__header tr{
+    background-color: #f2f2f2;
+}
+  
+.task__header tr:hover {
+    background-color: #ddd;
+}
+  
+.task__header th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--main-bg-green);
+    color: black;
+    font-size: 1.15rem;
+}
+
+.product__button{
+    background-color: #f44336; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+    body{
+        background: var(--main-bg-gray);
+        padding: 0 0.5rem;
+    }
+    .main{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 10px;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        background: var(--main-bg-green);
+        border-radius: 20px;
+    }
+    .tasks{
+        height: auto;
+        margin-top: 25px;
+    }
+}

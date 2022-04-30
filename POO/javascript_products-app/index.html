@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product APP</title>
+    <link rel="stylesheet" href="./style/main.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="navbar__list">
+            <li class="navbar__item">
+                <a href="/">Task APP</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="main" id="App">
+        <!-- APLICATION -->
+        <div class="form">
+            <div class="form__header">
+                <p>Add a Task</p>
+            </div>
+            <div class="form__body">
+                <form id="form">
+                    <div class="form__field">
+                        <label for="name">Name</label>
+                        <input type="input" name="" id="name" placeholder="Product Name" class="form__input" autocomplete="off" required>
+                    </div>
+                    <div class="form__field">
+                        <label for="description">Description</label>
+                        <input type="input" name="" id="description" placeholder="Product Name" class="form__input" autocomplete="off" required>
+                    </div>
+                    <input type="submit" name="" id="" value="Save" class="form__submit">
+                </form>
+
+            </div>
+        </div>
+        <div class="tasks" >
+            <table class="task__header" id="tasks">
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="app.js" type="module"></script>
+</body>
+</html>
